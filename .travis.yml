@@ -1,0 +1,17 @@
+sudo: false
+
+os:
+  - linux
+
+language:
+  - cpp
+
+script:
+  - mkdir build && cd build
+  - cmake ..
+  - make
+  - cd potato-gl/tests
+  - ./potato-gl_test
+
+packages:
+  - cmake
